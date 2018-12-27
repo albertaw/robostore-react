@@ -1,0 +1,971 @@
+/* ==================================
+ * Cerebro v1.0.0 
+ * http://cerebromusic.com/docs
+ * Copyright 2015 Cerebro Music
+ * info@cerebromusic.com
+ * ================================== 
+ 
+TABLE OF CONTENTS:
+PRELOADER
+BASE STYLES
+BUTTONS 
+CLOCK
+COLORS
+FONTS 
+FORMS
+LAYOUTS
+MENUS
+POSTS
+PRICE TABLES
+THUMBNAIL
+==================================== */
+/* =================================
+  SITE LOADER 
+==================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fefefe;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(../img/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: -20px 0 0 -20px;
+}
+
+/* =================================
+	BASE STYLES
+==================================== */
+body {
+  font-family: 'Roboto', helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-weight: 800;
+  margin: 16px 0;
+  letter-spacing: .05em;
+  font-size: 10em;
+}
+
+h2 {
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+ul {
+  padding: 0;
+  list-style-position: inside;
+}
+
+.transparent,
+.dark-theme.transparent,
+.light-theme.transparent {
+  background-color: transparent;
+}
+
+.dark-theme {
+  background-color: #080705;
+  color: #fff;
+}
+
+.dark-theme .scroll-down a {
+  color: #fff;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #6A6A6A;
+}
+
+.light-theme h2,
+.light-theme h3,
+.light-theme h4 {
+  color: #000;
+}
+
+.section {
+  padding: 6em 0;
+  position: relative;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.subsection {
+  margin: 2em 0;
+}
+
+.section.dark-theme {
+  border-bottom: none;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+  opacity: .65;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  .section {
+    padding: 4em 0;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+/* =================================
+   BUTTONS
+==================================== */
+.button {
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+  transition: all .3s;
+}
+
+.button-default {
+  font-size: 1em;
+  letter-spacing: 2px;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.button-pill {
+  border-radius: 3em;
+}
+
+.button-circle {
+  font-size: 2em;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  border-radius: 100%;
+}
+
+.icons {
+  padding: 0;
+  list-style-type: none;
+}
+
+.icons li {
+  display: inline-block;
+  margin: 0 .5em;
+  vertical-align: middle;
+}
+
+.icons-default a {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 1.875em;
+  transition: all .3s;
+}
+
+.icons-circle a {
+  border-radius: 100%;
+}
+
+.icons-l a {
+  color: #fff;
+}
+
+.icons-d a {
+  color: #000;
+}
+
+.button-sm {
+  padding: .6em 1.5em;
+}
+
+.button-lg {
+  min-width: 10em;
+  font-size: 1.3em;
+}
+
+.button .fa {
+  line-height: inherit;
+}
+
+.fa-play-circle {
+  font-size: 8em;
+}
+
+/* FILLED */
+.button-dark,
+.icons-dark a {
+  background-color: #000;
+  border: 2px solid #000;
+  color: #fff;
+}
+
+.button-blue {
+  color: #fff;
+  background-color: #228DFF;
+  border: 2px solid #228DFF;
+}
+
+.button-dark:visited,
+.button-dark:hover,
+.button-dark:active,
+.button-blue:focus,
+.button-blue:visited,
+.button-blue:hover,
+.button-blue:active {
+  color: #fff;
+}
+
+.button-light,
+.icons-light a {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
+}
+
+.button-light:visited,
+.button-light:hover,
+.button-light:active {
+  color: #000;
+}
+
+.button-light:hover,
+.button-dark:hover,
+.button-blue:hover,
+.icons-light a:hover,
+.icons-dark a:hover {
+  opacity: .85;
+}
+
+/* OUTLINE */
+.button-dark-o,
+.button-dark-o:visited,
+.button-dark-o:active,
+.button-dark-o:focus,
+.icons-dark-o a {
+  border: 2px solid #000;
+  color: #000;
+}
+
+.button-dark-o:hover,
+.icons-dark-o a:hover {
+  background: #000;
+  color: #fff !important;
+}
+
+.button-blue-o,
+.button-blue-o:visited,
+.button-blue-o:active {
+  border: 2px solid #228DFF;
+  color: #0072ff;
+}
+
+.button-blue-o:hover {
+  color: #fff !important;
+  background-color: #228DFF;
+}
+
+.button-light-o,
+.button-light-o:visited,
+.button-light-o:active,
+.button-light-o:focus,
+.icons-light-o a {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.button-light-o:hover,
+.icons-light-o a:hover {
+  background: #fff;
+  color: #000 !important;
+}
+
+/* =================================
+	CLOCK
+==================================== */
+.clock {
+  margin-bottom: 2em;
+  padding: 0;
+  font-weight: 300;
+}
+
+.clock span {
+  display: block;
+  width: 100%;
+}
+
+.clock-block {
+  display: inline-block;
+  margin: 0 2.5%;
+}
+
+.clock-number {
+  font-size: 6em;
+  line-height: 100%;
+}
+
+.clock-sm .clock-number {
+  font-size: 4em;
+}
+
+.clock-lg .clock-number {
+  font-size: 8em;
+}
+
+.clock-text {
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.clock-sm .clock-text {
+  font-size: 1em;
+}
+
+.clock-lg .clock-text {
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .clock-number,
+  .clock-sm .clock-number,
+  .clock-lg .clock-number {
+    font-size: 3em;
+  }
+
+  .clock-text,
+  .clock-sm .clock-text,
+  .clock-lg .clock-text {
+    font-size: .75em;
+  }
+}
+/* =================================
+	COLORS
+==================================== */
+/* dark
+#171717
+#080705
+*/
+.black-bg {
+  background-color: #000;
+}
+
+.gray-darker-bg {
+  background-color: #1F1F1F;
+}
+
+.gray-dark-bg {
+  background-color: #262728;
+}
+
+.gray-bg {
+  background-color: #4C4D4F;
+}
+
+.gray-light-bg {
+  background-color: #6A6A6A;
+}
+
+.gray-lighter-bg {
+  background-color: #dee1e5;
+}
+
+.light-bg {
+  background-color: #E9E9E9;
+}
+
+.lighter-bg {
+  background-color: #F6F6F6;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+/* =================================
+   FONTS
+==================================== */
+.open-sans {
+  font-family: 'Open Sans', helvetica, sans-serif;
+}
+
+.roboto {
+  font-family: 'Roboto', helvetica, sans-serif;
+}
+
+.lato {
+  font-family: 'Lato', helvetica, sans-serif;
+}
+
+.montserrat {
+  font-family: 'Montserrat', helvetica, sans-serif;
+}
+
+/* FONT WEIGHTS */
+.normal {
+  font-weight: 400;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bolder {
+  font-weight: 900;
+}
+
+/* =================================
+  CONTACT FORM
+==================================== */
+.form input[type="text"],
+.form textarea {
+  width: 100%;
+  padding: .7em;
+  border-radius: 2px;
+  border: 1px solid #CCC;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form {
+  margin: 2em auto;
+  max-width: 450px;
+  display: inline-block;
+}
+
+.form label {
+  font-weight: 300;
+}
+
+.form-header {
+  margin-bottom: 2em;
+}
+
+.form-title {
+  font-weight: 300;
+  font-size: 1.5em;
+  display: inline;
+  line-height: inherit;
+}
+
+.form-section {
+  margin-bottom: 1em;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.form-loader {
+  display: none;
+  text-align: center;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .5;
+  z-index: 1099;
+  height: 100%;
+  width: 100%;
+}
+
+.form-spinner {
+  position: absolute;
+  top: 40%;
+  font-size: 42px;
+  margin-left: -21px;
+  z-index: 1100;
+  color: #fff;
+}
+
+.form-results {
+  margin-bottom: 0;
+  clear: both;
+  display: none;
+}
+
+.form-results.error {
+  color: #E31837;
+}
+
+.form-results.success {
+  color: green;
+}
+
+.dark-theme .form-section input[type="text"],
+.dark-theme .form-section textarea {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.contact .modal-dialog {
+  max-width: 450px;
+}
+
+.contact .modal-content {
+  border: 0;
+  border-radius: 0;
+  padding: 2em 1em;
+}
+
+.contact .modal-close {
+  line-height: inherit;
+}
+
+.contact .button {
+  margin-bottom: 0;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+/* =================================
+  LAYOUTS
+==================================== */
+.bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.hero-bg {
+  overflow: hidden;
+  min-height: 100%;
+  /* makes full screen for mobile*/
+}
+
+.hero-wrapper {
+  position: absolute;
+  /*adds scrollbar*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* PAGE HEADER */
+.page-header {
+  padding: 64px 0;
+  margin: 0;
+  border-bottom: none;
+  position: relative;
+}
+
+/* =================================
+	MENUS
+==================================== */
+/* INNER POSITIONING FOR
+HORIZONTAL NAV */
+.nav-left {
+  position: absolute;
+  left: 1em;
+  top: 0;
+}
+
+.nav-right {
+  position: absolute;
+  right: 1em;
+  top: 0;
+}
+
+.nav-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+/* so we can position nav 
+elements absolutely */
+.menu-horizontal .container,
+.menu-horizontal .container-fluid {
+  position: relative;
+}
+
+/* LINK STYLES */
+.menu-logo {
+  font-size: 1.5em;
+  font-family: courier;
+  letter-spacing: 2px;
+}
+
+.menu-top.light-theme {
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.menu-bottom.light-theme {
+  border-top: 1px solid #E9E9E9;
+}
+
+.light-theme .menu-logo,
+.menu .menu-mobile.light-theme li a,
+.menu.light-theme li a,
+.footer.light-theme li a {
+  /*color: #4c4d4f;*/
+  color: #000;
+}
+
+.dark-theme .menu-logo,
+.menu .menu-mobile.dark-theme li a,
+.menu.dark-theme li a,
+.footer.dark-theme li a {
+  color: #fff;
+}
+
+.menu ul li {
+  letter-spacing: 2px;
+}
+
+.menu ul,
+.footer ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer ul {
+  margin-bottom: 1em;
+}
+
+.footer a,
+.menu a {
+  text-decoration: none;
+}
+
+.menu-horizontal a {
+  display: inline-block;
+}
+
+.menu-horizontal ul li,
+.footer ul li {
+  display: inline-block;
+  margin: 0 1em;
+  vertical-align: middle;
+}
+
+.menu-vertical a,
+.menu-vertical ul li,
+.menu-horizontal .menu-mobile li,
+.menu-mobile ul,
+.menu-mobile a {
+  display: block;
+}
+
+.menu-vertical .icons li {
+  display: inline-block;
+}
+
+.menu-vertical a {
+  padding: .5em 0;
+}
+
+/* LAYOUTS */
+.menu {
+  z-index: 9;
+  position: absolute;
+}
+
+.menu.affix {
+  position: fixed;
+}
+
+.menu-mobile {
+  display: none;
+  padding: 1em .5em;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.footer {
+  padding: 32px 0;
+  text-align: center;
+}
+
+.menu-horizontal {
+  text-align: center;
+  width: 100%;
+  height: 6em;
+  line-height: 6em;
+  left: 0;
+}
+
+.menu-thin {
+  height: 4em;
+  line-height: 4em;
+}
+
+.menu-top {
+  top: 0;
+}
+
+.menu-bottom {
+  bottom: 0;
+}
+
+.menu-bottom section {
+  margin: 1em 0;
+}
+
+.menu-vertical {
+  position: fixed;
+  width: 260px;
+  top: 0;
+  height: 100%;
+  padding: 1em;
+  z-index: 10;
+}
+
+/* STATES */
+.menu-left {
+  left: 0;
+}
+
+.menu-left-closed {
+  left: -260px;
+}
+
+.menu-right {
+  right: 0;
+}
+
+.menu-right-closed {
+  right: -260px;
+}
+
+.menu-push-to-right {
+  left: 260px;
+}
+
+.menu-push-to-left {
+  left: -260px;
+}
+
+.menu .fa-navicon,
+.menu .fa-close {
+  cursor: pointer;
+  font-size: 1.75em;
+}
+
+.menu .fa-navicon {
+  line-height: inherit;
+}
+
+.menu .toggle-text {
+  line-height: inherit;
+  display: inline-block;
+  margin: 0 1em;
+}
+
+/* TRANSITIONS */
+.menu,
+.menu-push {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transiton: all .5s ease;
+}
+
+/* TOP NAV TOGGLER */
+.toggle-input {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-logo {
+    font-size: 1.5em;
+  }
+
+  .menu-horizontal {
+    height: 4em;
+    line-height: 4em;
+  }
+
+  /* must be defined here so menu only shows on mobile*/
+  #nav-toggle:checked ~ .menu-mobile {
+    display: block;
+  }
+}
+/* =================================
+	POSTS
+==================================== */
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  margin-bottom: 4em;
+}
+
+.post-title a {
+  color: #000;
+}
+
+.post-content {
+  font-family: garamond;
+  color: #000;
+  font-size: 1.25em;
+}
+
+.post-link,
+.post-link:hover,
+.post-link:visited {
+  color: #000;
+}
+
+.post-link span {
+  margin-left: .5em;
+}
+
+/* =================================
+    PRICE TABLES
+==================================== */
+.price-table {
+  padding-bottom: 1.5em;
+  border-radius: 4px;
+  font-weight: 100;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.price-table h3 {
+  font-weight: 100;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.price {
+  font-size: 4em;
+}
+
+.price-table ul {
+  padding: 0;
+  list-style-type: none;
+  margin-top: 0;
+}
+
+.price-table li {
+  display: block;
+  padding: .25em 0;
+}
+
+.light-theme .price-table {
+  border: 1px solid #dee1e5;
+}
+
+.light-theme .price-table h3 {
+  border-bottom: 1px solid #dee1e5;
+}
+
+.dark-theme .price-table {
+  border: 1px solid #fff;
+}
+
+.dark-theme .price-table h3 {
+  border-bottom: 1px solid #fff;
+}
+
+/* =================================
+	THUMBNAIL
+==================================== */
+.thumbnail {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thumb-overlay {
+  opacity: 0;
+}
+
+.button-centered {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  margin-top: -1.5em;
+}
+
+.thumb-overlay {
+  transition: all .3s ease;
+}
+
+.thumbnail:hover .thumb-overlay {
+  opacity: 1;
+}

@@ -1,0 +1,39 @@
+h1, h2 {
+	color: #000;
+}
+
+.menu-top.light-theme {
+  border-bottom: 0;
+}
+
+.user-list, .item-list {
+	list-style-type: none;
+}
+
+.user-list li {
+	margin-bottom: 16px;
+}
+
+.item-list img, .item {
+	width: 100px;
+}
+
+.yellow-bg {
+	background-color: #FFD400;
+}
+
+.purple-bg {
+	background-color: #3A015C;
+}
+
+.blue-bg {
+	background-color: #004FFF;
+}
+
+.red-bg {
+	background-color: #f40000;
+}
+
+.home-bg {
+	background-image: url('../img/headphones.jpeg')
+}
