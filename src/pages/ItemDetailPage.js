@@ -14,19 +14,15 @@ class ItemDetailPage extends Component {
 
 	componentDidMount() {
 		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
+		//const host = 'http://localhost:8080';
 		const sellersPath = host + '/api/items/' + this.props.match.params.id + '/users';
 		const itemPath = host + '/api/items/' + this.props.match.params.id;
 		
-		axios.all([
-			axios.get(sellersPath),
-			axios.get(itemPath)
-		])
-			.then(axios.spread((sellers, item) => {
-				//must be set in the order listed in state object
-				this.setState({sellers: sellers.data});
-				this.setState({item: item.data});
-			}))
-			.catch(error => console.log(error));
+		axios.get(itemPath)
+		.then(response => {
+			this.setState({item: response.data});
+		})
+		.catch(error => console.log(error));
 	}
 
 	render() {
@@ -41,8 +37,6 @@ class ItemDetailPage extends Component {
 					<div className="container">
 						<h2>{this.state.item.name}</h2>
 						<img className="item" src={this.state.item.url} alt={this.state.item.name} />
-						<h2>Other buying options</h2>
-						<UserList users={this.state.sellers} />
 					</div>
 				</div>
 			</App>
