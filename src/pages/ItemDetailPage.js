@@ -14,8 +14,6 @@ class ItemDetailPage extends Component {
 
 	componentDidMount() {
 		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
-		//const host = 'http://localhost:8080';
-		const sellersPath = host + '/api/items/' + this.props.match.params.id + '/users';
 		const itemPath = host + '/api/items/' + this.props.match.params.id;
 		
 		axios.get(itemPath)

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import App from '../App';
 import ItemList from '../components/item/ItemList';
+import axios from 'axios';
 
 export default class ItemListPage extends Component {
 	constructor(props) {
@@ -13,9 +14,8 @@ export default class ItemListPage extends Component {
 	componentDidMount() {
 		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
 
-		fetch(host + '/api/items')
-		.then(data => data.json())
-		.then(response => this.setState({items: response}))
+		axios.get(host + '/api/items')
+		.then(response => this.setState({items: response.data}))
 		.catch(error => console.log(error));
 	}
 
