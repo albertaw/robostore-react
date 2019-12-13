@@ -14,7 +14,7 @@ class UserDetailPage extends Component {
 	}
 
 	componentDidMount() {
-		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
+		const host = 'https://robostore.herokuapp.com';
 		const itemPath = host + '/api/users/' + this.props.match.params.id + '/inventory';
 		const userPath = host + '/api/users/' + this.props.match.params.id;
 		

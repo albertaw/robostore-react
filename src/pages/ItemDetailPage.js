@@ -13,7 +13,7 @@ class ItemDetailPage extends Component {
 	}
 
 	componentDidMount() {
-		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
+		const host = 'https://robostore.herokuapp.com';
 		const itemPath = host + '/api/items/' + this.props.match.params.id;
 		
 		axios.get(itemPath)

@@ -12,7 +12,7 @@ export default class ItemListPage extends Component {
 	}
 
 	componentDidMount() {
-		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
+		const host = 'https://robostore.herokuapp.com';
 
 		axios.get(host + '/api/items')
 		.then(response => this.setState({items: response.data}))

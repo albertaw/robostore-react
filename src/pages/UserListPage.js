@@ -12,7 +12,7 @@ export default class UserListPage extends Component {
 	}
 
 	componentDidMount() {
-		const host = 'http://robostore-api.us-east-1.elasticbeanstalk.com';
+		const host = 'https://robostore.herokuapp.com';
 		
 		axios.get(host + '/api/users')
 		.then(response => this.setState({users: response.data}))
