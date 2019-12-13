@@ -22,7 +22,7 @@ export default class ItemListPage extends Component {
 	render() {
 		return (
 			<App>
-				<div className="bg page-header yellow-bg">
+				<div className="bg page-header">
 					<div className="container">
 						<h1>Items</h1>
 					</div>

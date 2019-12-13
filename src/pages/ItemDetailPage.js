@@ -26,7 +26,7 @@ class ItemDetailPage extends Component {
 	render() {
 		return (
 			<App>
-				<div className="bg page-header yellow-bg">
+				<div className="bg page-header">
 					<div className="container">
 						<h1>Buy now</h1>
 					</div>

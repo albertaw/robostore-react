@@ -37,3 +37,15 @@ h1, h2 {
 .home-bg {
 	background-image: url('../img/headphones.jpeg')
 }
+
+.jellyfish-bg {
+	background-image: url('../img/jellyfish.jpeg')
+}
+
+.controller-bg {
+	background-image: url('../img/controller.jpeg')
+}
+
+.lightning-bg {
+	background-image: url('../img/lightning.jpeg')
+}

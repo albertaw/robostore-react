@@ -22,9 +22,13 @@ export default class UserListPage extends Component {
 	render() {
 		return (
 			<App>
-				<div className="bg page-header yellow-bg">
+				<div className="bg page-header lightning-bg dark-theme">
 					<div className="container">
 						<h1>Games</h1>
+					</div>
+				</div>
+				<div className="section">
+					<div className="container">
 						<UserList users={this.state.users} />
 					</div>
 				</div>

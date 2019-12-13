@@ -2,13 +2,14 @@ import React from 'react';
 
 function Footer() {
 	return (
-		<footer className="footer yellow-bg">
+		<footer className="footer light-theme">
 			<div className="container">
-        <p>
-          Copyright 2018 Alberta Williams
-        </p>
-      </div>
-    </footer>
+        		<ul>
+          			<li><a href="https://github.com/albertaw/robostore-react" target="_blank">Github Repo</a></li>
+          			<li><a href="http://roboberta.com/" target="_blank">Blog</a></li>
+        		</ul>
+      		</div>
+    	</footer>
 	)
 }
 
